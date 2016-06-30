@@ -1,5 +1,4 @@
 body {
-  background: black;
   text-align: center;
   overflow: hidden;
 }
@@ -10,11 +9,13 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  background: radial-gradient(circle, rgba(0,0,0,.9), black);
+
 }
 
 img {
   position: relative;
   z-index: 1;
-  top: calc(50vh - 3em);
-  height: 6em;
+  top: calc(50vh - 3.2em);
+  height: 6.4em;
 }

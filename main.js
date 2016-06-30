@@ -64,10 +64,10 @@ function animate (time) {
     camera.position.y += ( - mouseY - camera.position.y ) * 0.01;
     particleSystem.rotation.x += 0.001;
     particleSystem.rotation.y += 0.002;
-    if (starfield.navActive) {
-      shape.rotation.x += 0.001;
-      shape.rotation.y += 0.0005;
-    }
+    // shape.rotation.x += 0.002;
+    // shape.rotation.y += 0.001;
+    shape.rotation.x += (mouseX / 70000) + 0.0001;
+    shape.rotation.y += (mouseY / 70000) + 0.0001;
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
