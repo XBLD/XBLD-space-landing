@@ -2,29 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="p:domain_verify" content="0af1ec81256d10cfb4d957a03d1618c8"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/assets/images/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
   <title>XBLD</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <img src="xbld-coming-soon.svg"/>
+  <header class="header">
+    <div class="header__nav-toggle">
+      <svg width="34" height="34" 
+         viewPort="0 0 34 34" version="1.1"
+         xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="1" 
+              x2="34" y2="1" />
+        <line x1="0" y1="11" 
+              x2="34" y2="11" />
+        <line x1="0" y1="21" 
+              x2="34" y2="21" />
+      </svg>
+    </div>
+    <div class="header__nav">
+      <nav class="social">
+        <ul class="social__list">
+          <li class="social__item social__item--twitter"><a href="/#">Twitter</a></li>
+          <li class="social__item social__item--dribbble"><a href="/#">Dribbble</a></li>
+          <li class="social__item social__item--instagram">
+            <a href="/#">
+              <span>I</span>
+              <span>n</span>
+              <span>s</span>
+              <span>t</span>
+              <span>a</span>
+              <span>g</span>
+              <span>r</span>
+              <span>a</span>
+              <span>m</span>
+            </a>
+          </li>
+          <li class="social__item social__item--codepen"><a href="/#">CodePen</a></li>
+          <li class="social__item social__item--shop"><a href="/#">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <img id="xbld" class="logo" src="assets/images/xbld-coming-soon.svg"/>
   <div id="background"></div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r78/three.js"></script>
   <script src="main.js"></script>

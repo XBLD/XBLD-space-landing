@@ -1,0 +1,33 @@
+@import 'bourbon';
+@import 'reset';
+@import 'vars';
+@import 'fonts';
+@import 'header';
+
+body {
+  text-align: center;
+  overflow: hidden;
+  background: black;
+}
+
+#background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, lighten(black, 4%), black);
+}
+
+.logo {
+  @include transition(all #{$logo-animation-speed}ms ease-out);
+  position: relative;
+  z-index: 1;
+  top: calc(50vh - 3.2em);
+  height: 11vh;
+
+  &--hide {
+    opacity: 0;
+  }
+}
