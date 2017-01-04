@@ -167,13 +167,10 @@
 
   &--instagram {
     a {
-      margin-left: 1.95vh;
+      display: flex;
     }
-
     span {
-      @include transition(color 100ms ease-out);
       display: inline-block;
-      margin-left: -1.95vh;
     }
   }
 
