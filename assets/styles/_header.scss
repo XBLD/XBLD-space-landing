@@ -33,21 +33,6 @@
     stroke-dasharray: 35;
     stroke-dashoffset: 0;
   }
-  
-  @at-root .is-safari &--hover line {
-    &:nth-child(1) {
-      @include transform(translate3d(0, -2px, 0));
-      @include animation(linehover-safari 550ms ease-in-out);
-    }
-    &:nth-child(2) {
-      @include transform(translate3d(0, 0, 0));
-      @include animation(linehover-safari 550ms 70ms ease-in-out);
-    }
-    &:nth-child(3) {
-      @include transform(translate3d(0, 2px, 0));
-      @include animation(linehover-safari 550ms 140ms ease-in-out);
-    }
-  }
 
   &--hover {
     line {
@@ -71,12 +56,10 @@
       &:nth-child(1) {
         @include animation(toplineopen-firefox 480ms ease-in-out);
         @include animation-fill-mode(forwards);
-        // @include transform-origin(0px 0px);
       }
       &:nth-child(3) {
         @include animation(bottomlineopen-firefox 480ms ease-in-out);
         @include animation-fill-mode(forwards);
-        // @include transform-origin(0px 0px);
       }
     }
   }
@@ -97,6 +80,21 @@
         @include animation-fill-mode(forwards);
         @include transform-origin(top left);
       }
+    }
+  }
+
+  @at-root .is-safari &--hover:not(&--open) line {
+    &:nth-child(1) {
+      @include transform(translate3d(0, -2px, 0));
+      @include animation(linehover-safari 550ms ease-in-out);
+    }
+    &:nth-child(2) {
+      @include transform(translate3d(0, 0, 0));
+      @include animation(linehover-safari 550ms 70ms ease-in-out);
+    }
+    &:nth-child(3) {
+      @include transform(translate3d(0, 2px, 0));
+      @include animation(linehover-safari 550ms 140ms ease-in-out);
     }
   }
 }
@@ -168,6 +166,8 @@
   &--instagram {
     a {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
     span {
       display: inline-block;

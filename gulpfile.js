@@ -24,6 +24,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: require('node-bourbon').includePaths
     }).on('error', sass.logError))
+    .pipe(cssnano())
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
 });
@@ -34,6 +35,7 @@ gulp.task('scripts', function() {
       insertGlobals: true,
       debug: false
     }))
+    .pipe(uglify())
     .pipe(gulp.dest('./'))
     // .pipe(browserSync.reload());
 });
