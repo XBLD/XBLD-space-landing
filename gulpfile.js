@@ -4,6 +4,20 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync');
+var cssnano = require('gulp-cssnano');
+var uglify = require('gulp-uglify');
+
+gulp.task('minify-css', function() {
+  return gulp.src('./main.css')
+    .pipe(cssnano())
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('minify-js', function() {
+  return gulp.src('./main.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./'));
+});
 
 gulp.task('sass', function () {
   return gulp.src('./assets/styles/**/*.scss')
@@ -23,7 +37,9 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./'))
     // .pipe(browserSync.reload());
 });
- 
+
+gulp.task('minify', ['minify-js', 'minify-css']);
+
 gulp.task('default', function () {
   browserSync.init({
     server: {

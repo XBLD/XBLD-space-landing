@@ -4,10 +4,20 @@
 @import 'fonts';
 @import 'header';
 
+body, html {
+  height: 100%;
+}
+
 body {
-  text-align: center;
   overflow: hidden;
-  background: black;
+  background: lighten(black, 9%);
+}
+
+.landing-content {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #background {
@@ -17,15 +27,34 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(circle, lighten(black, 4%), black);
+  background: radial-gradient(ellipse, lighten(black, 12%), lighten(black, 9%));
+}
+
+.shape-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  max-width: em(790);
+  width: 100%;
+  overflow: hidden;
+  
+  .shape {
+    max-width: 100%;
+    min-width: em(600);
+    width: 100%;
+    opacity: .87;
+  }
 }
 
 .logo {
   @include transition(all #{$logo-animation-speed}ms ease-out);
-  position: relative;
-  z-index: 1;
-  top: calc(50vh - 3.2em);
-  height: 11vh;
+  position: absolute;
+  left: calc(50% - #{em(115)});
+  top: calc(50% - #{em(50)});
+  z-index: 100;
+  width: em(230);
 
   &--hide {
     opacity: 0;
