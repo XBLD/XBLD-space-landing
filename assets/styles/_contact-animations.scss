@@ -1,0 +1,48 @@
+.piece {
+  @include linear-gradient(-180deg, $contact-gradient-color-1, $contact-gradient-color-2);
+  @include backface-visibility(hidden);
+  position: relative;
+  height: 120vh;
+  flex: 1 1 0;
+
+  &.is-firefox {
+    outline: 1px solid transparent;
+  }
+
+  @for $i from 1 through 12 {
+    $transX: translateX($i * -2px);
+    $ms: 800;
+    $delay: 50 * $i;
+    $amount: (random() * 30) + 110 + 1vh;
+    $end: translateY(0vh) $transX ;
+    $start: '';
+
+    @if ($i % 2 == 1) {
+      $start: translateY($amount) $transX ;
+    } @else {
+      $start: translateY($amount * -1) $transX ;
+    }
+
+    &:nth-child(#{$i}) {
+      @include transform($start);
+      // z-index: $i;
+    }
+
+    @at-root .contact-open &:nth-child(#{$i}) {
+      @include animation(piece-#{$i} #{$ms}ms #{$delay}ms cubic-bezier(0.575, 0.320, 0.000, 0.975));
+      @include animation-fill-mode(forwards);
+    }
+
+    @include keyframes(piece-#{$i}) {
+      0% {
+        @include transform($start);
+      } 100% {
+        @include transform($end);
+      }
+    }
+  }
+
+  @media (max-width: $contact-breakpoint-medium) {
+    display: none;
+  }
+}

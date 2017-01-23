@@ -1,0 +1,66 @@
+.spinner {
+  @include transition(opacity 200ms ease-out);
+  @include animation(rotation 500ms infinite linear);
+  position: absolute;
+  height: em(20);
+  width: em(20);
+  left: calc(50% - #{em(10)});
+  top: calc(50% - #{em(10)});
+  border: 2px solid rgba(0, 174, 239, 0);
+  border-top-color: $contact-gradient-color-2;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.button {
+  @include transition(all 200ms ease-out, opacity 400ms ease-out);
+  @include transform(translateZ(0) scale(1));
+  @include backface-visibility(hidden);
+  position: relative;
+  display: inline-flex;
+  font-family: 'Gotham HTF';
+  font-size: em(22);
+  padding: 0;
+  background: white;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 9px 22px rgba(black, .1);
+
+  &__text {
+    @include transition(opacity 200ms ease-out);
+    display: inline-block;
+    padding: em(12) em(28);
+  }
+
+  &.is-loading {
+    .spinner {
+      opacity: 1;
+    }
+    .button__text {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    @include transform(scale(.99) translateZ(0));
+    box-shadow: 0 1px 7px rgba(black, .12);
+  }
+
+  &:active {
+    @include transform(scale(1) translateZ(0));
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

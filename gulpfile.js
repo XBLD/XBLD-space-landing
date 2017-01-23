@@ -51,7 +51,7 @@ gulp.task('default', function () {
     open: false,
     notify: false
   });
-  gulp.watch('./assets/styles/**/*.scss', ['sass']);
-  gulp.watch('./assets/js/**/*.js', ['scripts']);
+  gulp.watch('./assets/styles/*.scss', ['sass']);
+  gulp.watch('./assets/js/*.js', ['scripts']);
   gulp.watch('*.html').on('change', browserSync.reload);
 });

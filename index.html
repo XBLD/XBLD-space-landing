@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="p:domain_verify" content="0af1ec81256d10cfb4d957a03d1618c8"/>
@@ -49,7 +49,13 @@
             </a>
           </li>
           <li class="social__item social__item--codepen"><a target="_blank" ontouchstart="" href="https://codepen.io/XBLD/">CodePen</a></li>
-          <li class="social__item social__item--shop"><a target="_blank" ontouchstart="" href="https://ui8.net/users/xbld">Shop</a></li>
+          <li class="social__item social__item--shop">
+            <a target="_blank" ontouchstart="" href="https://ui8.net/users/xbld">
+              <span>UI</span>
+              <span>8</span>
+            </a>
+          </li>
+          <li class="social__item social__item--contact"><a href="contact" data-navigo>Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -60,7 +66,133 @@
       <img class="shape" src="assets/images/shape.svg"/>
     </div>  
   </div>
-  <div id="background"></div>
+  <div id="contact" class="contact">
+    <div class="contact__background-wrapper">
+      <div class="contact__background">
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+      </div>
+    </div>
+    <div class="contact__content">
+      <div class="contact-completed">
+        <div class="contact-completed__checkmark">
+          <img src="assets/images/checkmark-large.svg">
+        </div>
+        <h2 class="contact-completed__header">Project Inquiry Sent</h2>
+        <p class="contact-completed__message">We're excited to be working with you!<br>We'll get back to you shortly.</p>
+      </div>
+      <div class="contact-form">
+        <div class="company">
+          <ul>
+            <li class="company__logo"><img src="assets/images/xbld-logo.svg" /></li>
+            <li class="company__info">Sacramento, CA</li>
+            <li class="company__info">hello@xbld.io</li>
+          </ul>
+        </div>
+        <h2 class="contact-form__header">Want to work with us?</h2>
+        <form>
+        <div class="contact-form__form">
+          <div class="contact-form__input contact-form__input--half">
+            <input id="name" type="text" placeholder="name" name="name" required autocomplete="name">
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--half">
+            <input id="company" type="text" placeholder="company" name="company" autocomplete="company">
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--half">
+            <input id="email" type="email" placeholder="email" name="email" required autocomplete="email">
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--half">
+            <input id="phone" type="telephone" placeholder="phone" name="phone" autocomplete="tel">
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--select">
+            <select id="services" class="select">
+              <option>SERVICES</option>
+              <option value="Identity Design, $2k and up">Identity Design, $2k and up</option>
+              <option value="Landing Page, $5k and up">Landing Page, $5k and up</option>
+              <option value="Full Site, $10k and up">Full Site, $10k and up</option>
+              <option value="Web Application, $25k and up">Web Application, $25k and up</option>
+              <option value="Custom, my project type isn't listed">Custom, my project type isn't listed</option>
+            </select>
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--textarea">
+            <textarea id="summary" rows="3" placeholder="project summary" required></textarea>
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+        </div>
+        </form>
+        <button id="contact-submit" class="button">
+          <span class="button__text">SEND</span>
+          <div class="spinner"></div>
+        </button>
+        <p class="contact-error">Oops, something went wrong! Try again soon.</p>
+      </div>
+    </div>
+  </div>
+  <div id="space"></div>
+  <canvas id="gradient"></canvas>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r78/three.js"></script>
   <script src="main.js"></script>
 </body>

@@ -1,0 +1,94 @@
+
+// Hide real select boxes which have seen styled.
+select[data-ss-uuid] {
+  display: none;
+  pointer-events: none;
+}
+
+.style-select {
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  .ss-selected-option {
+    width: 100%;
+    padding: em(10);
+
+    &[data-value=''] {
+      color: rgba(white, .3);
+      font-weight: 500;
+    }
+
+    &:after {
+      @include transition(transform 200ms ease-out, bottom 340ms ease-in-out);
+      content: url(assets/images/caret.svg);
+      position: absolute;
+      bottom: em(10);
+      right: em(4);
+      opacity: .3;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .ss-dropdown {
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: none;
+    border: 0;
+    border-top: 0 none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(black, .08);
+
+    .ss-option {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: em(10);
+      color: #333;
+      background-color: white;
+
+      &:first-child {
+        pointer-events: none;
+        font-weight: 500;
+      }
+      
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(242, 244, 248);
+      }
+      
+      &.highlighted {
+      }
+
+      &.disabled {
+        color: #d0d0d0;
+      }
+
+      &.ticked::before {
+        position: absolute;
+        content: url(assets/images/checkmark.svg);
+        left: em(9);
+        top: em(9);
+      }
+    }
+  }
+
+  &.open {
+    .ss-dropdown {
+      display: block;
+    }
+    .ss-selected-option:after {
+      @include transform(rotateX(180deg));
+      opacity: 1;
+      bottom: em(12);
+      margin-bottom: em(-4);
+    }
+  }
+}

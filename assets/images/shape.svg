@@ -6,8 +6,8 @@
     <defs>
         <linearGradient x1="78.1506886%" y1="-5.57815271%" x2="50%" y2="109.402687%" id="linearGradient-1">
             <stop stop-color="#1E1E1E" offset="0%"></stop>
-            <stop stop-color="#3A3A3A" stop-opacity="0.588117074" offset="54.3077923%"></stop>
-            <stop stop-color="#000000" stop-opacity="0.190585371" offset="100%"></stop>
+            <stop stop-color="#3A3A3A" stop-opacity="0.5" offset="54.3077923%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.13" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
