@@ -25,7 +25,11 @@
 
     &:nth-child(#{$i}) {
       @include transform($start);
-      // z-index: $i;
+    }
+
+    @at-root .contact-closed &:nth-child(#{$i}) {
+      @include animation(piece-#{$i}-out #{$ms}ms #{$delay}ms cubic-bezier(0.575, 0.320, 0.000, 0.975));
+      @include animation-fill-mode(backwards);
     }
 
     @at-root .contact-open &:nth-child(#{$i}) {
@@ -38,6 +42,14 @@
         @include transform($start);
       } 100% {
         @include transform($end);
+      }
+    }
+
+    @include keyframes(piece-#{$i}-out) {
+      0% {
+        @include transform($end);
+      } 100% {
+        @include transform($start);
       }
     }
   }

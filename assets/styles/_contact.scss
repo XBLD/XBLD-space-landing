@@ -16,6 +16,12 @@ $contact-form-animation: all 570ms 940ms cubic-bezier(0.360, 0.350, 0.000, 0.945
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  
+  @at-root .contact-closed & {
+    .contact__content {
+      opacity: 0;
+    }
+  }
 
   @at-root .contact-open & {
     pointer-events: auto;
@@ -61,7 +67,7 @@ $contact-form-animation: all 570ms 940ms cubic-bezier(0.360, 0.350, 0.000, 0.945
     align-items: center;
     justify-content: center;
     min-height: 100%;
-    opacity: 0;
+    // opacity: 0;
   }
 
   &__content {
@@ -71,13 +77,14 @@ $contact-form-animation: all 570ms 940ms cubic-bezier(0.360, 0.350, 0.000, 0.945
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    // opacity: 0;
   }
 
   @media (max-width: $contact-breakpoint-medium) {
     &__background {
       @include transform(skewX(0deg) translateX(0px));
       @include linear-gradient(140deg, $contact-gradient-color-1, $contact-gradient-color-2);
+      opacity: 0;
     }
   }
 }
