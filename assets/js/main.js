@@ -7,6 +7,7 @@ var root = null;
 var useHash = false;
 var router = new Navigo(root, useHash);
 
+
 router
   .on('/', function () {
     contact.hide();

@@ -20,13 +20,13 @@ function init() {
   x0 = width / 2;
   y0 = height / 2;
   
-  r0 = 35;
-  g0 = 35;
-  b0 = 35;
+  r0 = 37;
+  g0 = 37;
+  b0 = 37;
   
-  r1 = 25;
-  g1 = 25;
-  b1 = 25;
+  r1 = 22;
+  g1 = 22;
+  b1 = 22;
   
   var outerRad = Math.sqrt(width * width + height * height) / 2;
   var dgrad = new DitheredRadialGradient(x0, y0, 0, width / 2, height / 2, outerRad);

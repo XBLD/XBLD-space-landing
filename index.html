@@ -14,6 +14,12 @@
   <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
   <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
   <title>XBLD | A Digital Agency</title>
+  <meta name="description" content="XBLD is a digital agency with headquarters in Sacramento, CA. We create high quality digital products for a lasting experience.">
+  <meta property="og:title" content="XBLD | A Digital Agency" />
+  <meta property="og:description" content="XBLD is a digital agency with headquarters in Sacramento, CA. We create high quality digital products for a lasting experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://xbld.io" />
+  <meta property="og:image" content="http://xbld.io/assets/images/xbld.png" />
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -100,10 +106,9 @@
           </ul>
         </div>
         <h2 class="contact-form__header">Want to work with us?</h2>
-        <form>
         <div class="contact-form__form">
-          <div class="contact-form__input contact-form__input--half">
-            <input id="name" type="text" placeholder="name" name="name" required autocomplete="name">
+          <div class="contact-form__input contact-form__input--half contact-form__input--name">
+            <input id="name" type="text" placeholder="name" name="name" required autocomplete="off">
             <span class="error-icon"></span>
             <svg 
              viewPort="0 0 auto auto" version="1.1"
@@ -115,7 +120,19 @@
             </svg>
           </div>
           <div class="contact-form__input contact-form__input--half">
-            <input id="company" type="text" placeholder="company" name="company" autocomplete="company">
+            <input id="company" type="text" placeholder="company" name="company" autocomplete="off">
+            <span class="error-icon"></span>
+            <svg 
+             viewPort="0 0 auto auto" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+              <line x1="0" y1="1" 
+                    x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div class="contact-form__input contact-form__input--half contact-form__input--email">
+            <input id="email" type="email" placeholder="email" name="email" autocomplete="off" required>
             <span class="error-icon"></span>
             <svg 
              viewPort="0 0 auto auto" version="1.1"
@@ -127,7 +144,7 @@
             </svg>
           </div>
           <div class="contact-form__input contact-form__input--half">
-            <input id="email" type="email" placeholder="email" name="email" required autocomplete="email">
+            <input id="phone" type="telephone" placeholder="phone" name="phone" autocomplete="off">
             <span class="error-icon"></span>
             <svg 
              viewPort="0 0 auto auto" version="1.1"
@@ -138,21 +155,9 @@
                     x2="100%" y2="1" />
             </svg>
           </div>
-          <div class="contact-form__input contact-form__input--half">
-            <input id="phone" type="telephone" placeholder="phone" name="phone" autocomplete="tel">
-            <span class="error-icon"></span>
-            <svg 
-             viewPort="0 0 auto auto" version="1.1"
-             xmlns="http://www.w3.org/2000/svg">
-              <line x1="0" y1="1" 
-                    x2="100%" y2="1" />
-              <line x1="0" y1="1" 
-                    x2="100%" y2="1" />
-            </svg>
-          </div>
-          <div class="contact-form__input contact-form__input--select">
+          <div class="contact-form__input contact-form__input--select" data-value="SERVICES">
             <select id="services" class="select">
-              <option>SERVICES</option>
+              <option disabled selected>SERVICES</option>
               <option value="Identity Design, $2k and up">Identity Design, $2k and up</option>
               <option value="Landing Page, $5k and up">Landing Page, $5k and up</option>
               <option value="Full Site, $10k and up">Full Site, $10k and up</option>
@@ -182,7 +187,6 @@
             </svg>
           </div>
         </div>
-        </form>
         <button id="contact-submit" class="button">
           <span class="button__text">SEND</span>
           <div class="spinner"></div>

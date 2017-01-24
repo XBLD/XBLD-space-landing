@@ -1,5 +1,6 @@
 var styleSelect = require('styleselect');
 var contactSubmitButton = document.getElementById('contact-submit');
+var contact = document.querySelectorAll('.contact__content')[0];
 var selects = document.querySelectorAll('.select');
 var inputs = {
   name: {
@@ -70,7 +71,6 @@ var validateAllFields = function () {
 };
 
 var handleContactSubmit = function (e) {
-  var contact = document.querySelectorAll('.contact__content')[0];
   var hasError = false;
 
   if (!validateAllFields()) {
@@ -123,6 +123,8 @@ Object.keys(inputs).forEach(function (input) {
           setError(field, false);
         }
       }
+      field.parentNode.classList.add('has-value');
+      field.parentNode.dataset.value = field.value;
     });
   } else {
     field.addEventListener('keydown', function (e) {

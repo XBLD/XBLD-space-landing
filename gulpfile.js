@@ -26,7 +26,7 @@ gulp.task('sass', function () {
     }).on('error', sass.logError))
     .pipe(cssnano())
     .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('scripts', function() {
