@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^/contact /index.html [R=301,L]
+RewriteRule contact /index.html [L]
