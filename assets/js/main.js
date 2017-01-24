@@ -3,16 +3,13 @@ require('./gradient');
 require('./form');
 var contact = require('./contact-animations');
 var Navigo = require('navigo');
-var root = null;
-var useHash = false;
-var router = new Navigo(root, useHash);
-
+var router = new Navigo(null, true);
 
 router
   .on('/', function () {
     contact.hide();
   })
-  .on('/contact', function () {
+  .on('contact', function () {
     contact.show();
   })
   .resolve();
