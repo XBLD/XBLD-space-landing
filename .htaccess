@@ -1,3 +1,2 @@
-RewriteEngine on
-
-RewriteRule contact index.html [L]
+RewriteEngine On
+RewriteRule contact /index.html [L]
