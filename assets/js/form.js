@@ -84,7 +84,7 @@ var handleContactSubmit = function (e) {
       company: inputs.company.field.value,
       phone: inputs.phone.field.value,
       services: inputs.services.field.value,
-      summary: inputs.name.field.value
+      summary: inputs.summary.field.value
     }));
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
