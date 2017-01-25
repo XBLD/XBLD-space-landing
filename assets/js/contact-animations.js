@@ -12,6 +12,7 @@ module.exports.show = function () {
 };
 
 module.exports.hide = function () {
+  console.log(isOpen)
   if (isOpen) {
     document.body.classList.remove('contact-open');
     document.body.classList.add('contact-closed');

@@ -76,7 +76,7 @@ var handleContactSubmit = function (e) {
   if (!validateAllFields()) {
     var xhr = new XMLHttpRequest();
     contactSubmitButton.classList.add('is-loading');
-    xhr.open('POST', 'https://formspree.io/andy@xbld.io');
+    xhr.open('POST', 'https://formspree.io/info@xbld.io');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
       name: inputs.name.field.value,
