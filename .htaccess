@@ -1,3 +1,3 @@
 RewriteEngine On
 RewriteRule contact /#contact [NE]
-RewriteRule referral-terms /xbld-referral-terms.pdf [NE]
+RewriteRule referral-program /xbld-referral-program.pdf [NE]
